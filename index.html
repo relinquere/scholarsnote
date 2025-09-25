@@ -4,18 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholars' Note</title>
-	
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSQNGHXBDQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NSQNGHXBDQ');
-</script>
-	<!-- Google tag (gtag.js) ended -->
-	
     <style>
         * {
             margin: 0;
@@ -32,67 +20,155 @@
         }
         
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
         
         h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             color: #000;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-style: italic;
         }
         
         h2 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 2rem 0 1rem 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem 0;
             color: #000;
         }
         
         p {
+            margin-bottom: 1.2rem;
+            color: #444;
+            font-size: 1.05rem;
+        }
+        
+        .coming-soon {
+            text-align: center;
+            margin: 2rem 0 3rem 0;
+            padding: 2.5rem 2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .coming-soon h2 {
             margin-bottom: 1rem;
+            color: #2c5aa0;
+        }
+        
+        .coming-soon p {
+            font-size: 1.1rem;
             color: #555;
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2.5rem 0;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: #2c5aa0;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1e3f73;
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #2c5aa0;
+            border: 2px solid #2c5aa0;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #2c5aa0;
+            color: white;
         }
         
         .highlight {
-            border-left: 2px solid #000;
-            padding-left: 20px;
+            border-left: 3px solid #2c5aa0;
+            padding-left: 1.5rem;
             margin: 2rem 0;
-        }
-        
-        .highlight strong {
-            color: #000;
-            font-weight: 500;
+            background-color: #fafbfc;
+            padding: 1.5rem 1.5rem 1.5rem 2rem;
+            border-radius: 0 6px 6px 0;
         }
         
         .highlight ul {
             list-style: none;
             padding: 0;
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
         }
         
         .highlight li {
-            margin-bottom: 0.5rem;
-            color: #555;
+            margin-bottom: 0.8rem;
+            color: #444;
+            font-size: 1.05rem;
         }
         
         .highlight li::before {
-            content: '—';
-            margin-right: 8px;
-            color: #000;
+            content: '▸';
+            margin-right: 10px;
+            color: #2c5aa0;
+            font-weight: bold;
         }
         
-        .coming-soon {
+        .vision-section {
+            margin-top: 3rem;
+        }
+        
+        .impact-quote {
             text-align: center;
-            margin: 3rem 0;
-            padding: 2rem 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .coming-soon h2 {
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2c5aa0;
+            font-style: italic;
+            margin: 2.5rem 0;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
         }
         
         @media (max-width: 600px) {
@@ -101,7 +177,19 @@
             }
             
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                text-align: center;
+            }
+            
+            .coming-soon {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -109,29 +197,52 @@
 <body>
     <div class="container">
         <h1>Scholars' Note</h1>
+		
+			<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSQNGHXBDQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NSQNGHXBDQ');
+</script>
+	<!-- Google tag (gtag.js) ended -->
+	
+        <p class="subtitle">Supporting the Global Research Community</p>
         
         <div class="coming-soon">
             <h2>Coming Soon</h2>
             <p>We're working hard to bring you comprehensive content and resources designed to inspire and support the research community. Stay tuned—details will be updated soon!</p>
         </div>
         
-        <p>At <strong>Scholars' Note</strong>, we are seeking altruistic scholars who are passionate about helping others—especially those eager to pursue research but who lack access to facilities, information, guidance, or motivation.</p>
-        
-        <p>📩 If you are interested in contributing, please email us at <strong>support@scholarsnote.org</strong>.</p>
-        
-        <h2>Our Vision</h2>
-        <p>We aim to create a supportive space dedicated to researchers, academics, and students as they navigate the world of scholarly publishing.</p>
-        
-        <p>Through our platform, we will provide:</p>
-        <div class="highlight">
-            <ul>
-                <li><strong>Updates</strong> on journals, indexing, and open-access publishing</li>
-                <li><strong>Guidance</strong> on academic writing, publishing strategies, and career growth</li>
-                <li><strong>Motivation & mentoring</strong> for aspiring researchers</li>
-            </ul>
+        <div class="cta-section">
+            <h3>🤝 Join Our Mission</h3>
+            <p>At <strong>Scholars' Note</strong>, we are seeking altruistic scholars who are passionate about helping others—especially those eager to pursue research but who lack access to facilities, information, guidance, or motivation.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://forms.gle/qeD154Nepn1Ruupa8" class="btn btn-primary" target="_blank" rel="noopener">Join Our Team</a>
+                <a href="mailto:support@scholarsnote.org" class="btn btn-secondary">Email Us</a>
+            </div>
         </div>
         
-        <p>Together, let's make scholarly knowledge more <strong>accessible, inclusive, and impactful</strong>.</p>
+        <div class="vision-section">
+            <h2>Our Vision</h2>
+            <p>We aim to create a supportive space dedicated to researchers, academics, and students as they navigate the world of scholarly publishing.</p>
+            
+            <p>Through our platform, we will provide:</p>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Updates</strong> on journals, indexing, and open-access publishing</li>
+                    <li><strong>Guidance</strong> on academic writing, publishing strategies, and career growth</li>
+                    <li><strong>Motivation & mentoring</strong> for aspiring researchers</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="impact-quote">
+            "Together, let's make scholarly knowledge more accessible, inclusive, and impactful."
+        </div>
     </div>
 </body>
 </html>
